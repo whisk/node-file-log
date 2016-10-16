@@ -1,18 +1,23 @@
 {
-  "author": "sh84",
+  "author": "Alex Svetkin",
   "name": "file-log",
-  "description": "Extends node.js console to work with log file, log levels and log reopen by signal.",
+  "license": "MIT",
+  "description": "Extends standard Node.js console to support files, levels and log reopening by a signal",
   "keywords": ["log", "logging", "console.log", "logrotate"],
-  "version": "0.0.7",
+  "version": "0.0.9",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sh84/node-file-log.git"
+    "url": "git://github.com/whisk/node-file-log.git"
   },
   "main": "log.js",
   "dependencies": {},
-  "devDependencies": {},
-  "optionalDependencies": {},
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -R spec --timeout 5000 test/test.js"
   }
 }
