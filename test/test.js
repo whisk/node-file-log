@@ -43,10 +43,12 @@ describe('Main', function() {
     it('should reopen file', function(done) {
       logger.setFile(logfile, function() {
         logger.reopen(function() {
-          data = fs.readFileSync(logfile).toString();
-          assert.ok(data.indexOf('[NOTICE]') >= 0, 'No notice message');
-          assert.ok(data.indexOf('Reopened log file by SIGUSR1') >= 0, 'No message');
-          done();
+          logger.flush(function() {
+            data = fs.readFileSync(logfile).toString();
+            assert.ok(data.indexOf('[NOTICE]') >= 0, 'No notice message');
+            assert.ok(data.indexOf('Reopened log file by SIGUSR1') >= 0, 'No message');
+            done();
+          });
         });
       });
     });
