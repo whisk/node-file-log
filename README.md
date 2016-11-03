@@ -8,8 +8,8 @@ Extends standard Node.js console to support files, levels and log reopening by a
 
     require('file-log');
     console.setFile('node.log', function() {
-        console.notice('Hello world!')
-    };
+        console.notice('Hello world!');
+    });
 
 Contents of ``node.log``:
 

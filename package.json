@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "Extends standard Node.js console to support files, levels and log reopening by a signal",
   "keywords": ["log", "logging", "console.log", "logrotate"],
-  "version": "0.0.9",
+  "version": "0.0.9-build2",
   "repository": {
     "type": "git",
     "url": "git://github.com/whisk/node-file-log.git"

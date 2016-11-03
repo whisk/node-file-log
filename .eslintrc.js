@@ -8,8 +8,7 @@ module.exports = {
   },
   env: {
     es6:   false,
-    node:  true,
-    mocha: true
+    node:  true
   },
   extends: "eslint:recommended"
 };
